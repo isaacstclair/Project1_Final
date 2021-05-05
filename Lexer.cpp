@@ -106,5 +106,6 @@ void Lexer::Print(){
     for(int i=0; i < static_cast<int>(tokens.size()); i++){
         tokens[i]->ToString();
     }
-    std::cout << "Total Tokens = " << tokens.size() << std::endl;
+    std::cout << "Total Tokens = " << tokens.size();
+
 }

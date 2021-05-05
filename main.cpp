@@ -21,13 +21,6 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    /*if(input.is_open()){
-        while(input.good()){
-            getline(input, txt);
-        }
-    input.close();
-    }*/
-
     if(input){
         std::ostringstream ss;
         ss << input.rdbuf();

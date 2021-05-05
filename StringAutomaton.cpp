@@ -14,7 +14,8 @@ void StringAutomaton::S0(const std::string& input) {
 void StringAutomaton::S1(const std::string& input) {
     if(index == input.size()){
         Serr();
-    } else if (input[index] != '\'' && input[index] != EOF){
+    } else if (input[index] != '\'' && index != input.size()){
+        if(input[index] == '\n'){newLines++;}
         inputRead++;
         index++;
         S1(input);
