@@ -17,7 +17,7 @@ void IDAutomaton::S1(const std::string& input) {
         index++;
         S1(input);
     } else if (!isalnum(input[index])){
-        if(input[index]=='\n'){newLines++;}
+        return;
     }
     else {
         Serr();
