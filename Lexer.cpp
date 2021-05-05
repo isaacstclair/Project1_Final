@@ -82,7 +82,7 @@ void Lexer::Run(std::string& input) {
 
         } else { //No machine accepted the input, so it is invalid
             maxRead = 1;
-            Token* newToken = new Token(TokenType::UNDEFINED, input, lineNumber);
+            Token* newToken = new Token(TokenType::UNDEFINED, input.substr(0,maxRead), lineNumber);
             tokens.push_back(newToken);
             //add newToken to collection of all tokens
         }

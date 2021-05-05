@@ -1,27 +1,5 @@
 # COPYRIGHT © BRIGHAM YOUNG UNIVERSITY CS 236
 # FOR USE ONLY DURING SPRING 2021 SEMESTER
-'Hello World!'
-Hello World
-'Hello' 'World'
-Hello  World
-
-'ThisIsAString'
-ThisIsAnID
-
-'
-This
-string
-is
-spread
-across
-many
-lines.
-'
-
-These
-are
-all
-separate
-IDs
-
-Schemes 'is different than' schemes
+!!""$$%%&&''(())**++,,--..//00112233445566778899::;;<<==>>??@@AABBCCDDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTUUVVWWXXYYZZ##
+[[\\]]^^__``aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz
+{{||}}~~
