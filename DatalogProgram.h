@@ -1,0 +1,14 @@
+//
+// Created by isaac on 5/10/2021.
+//
+
+#ifndef PROJECT1_STARTER_CODE_DATALOGPROGRAM_H
+#define PROJECT1_STARTER_CODE_DATALOGPROGRAM_H
+
+
+class DatalogProgram {
+
+};
+
+
+#endif //PROJECT1_STARTER_CODE_DATALOGPROGRAM_H

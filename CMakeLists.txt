@@ -45,4 +45,14 @@ add_executable(Project1_Starter_Code
         CommentAutomaton.cpp
         CommentAutomaton.h
         UndefinedAutomaton.cpp
-        UndefinedAutomaton.h)
+        UndefinedAutomaton.h
+        Rule.cpp
+        Rule.h
+        Parameter.cpp
+        Parameter.h
+        DatalogProgram.cpp
+        DatalogProgram.h
+        Predicate.cpp
+        Predicate.h
+        Parser.h
+        Parser.cpp)

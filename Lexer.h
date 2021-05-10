@@ -21,6 +21,7 @@ public:
 
     void Run(std::string& input);
     void Print();
+    std::vector<Token*> getTokens();
 
 };
 
