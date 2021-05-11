@@ -31,13 +31,15 @@ int main(int argc, char** argv) {
 
     Lexer* lexer = new Lexer();
     lexer->Run(txt);
-    lexer->Print();
+
+
 
     try {
-        Parser::ParseDatalogProgram(lexer->getTokens());
+        Parser myParser(lexer->getTokens());
         std::cout << "Success!" << std::endl;
-    } catch(TokenType type){
-        std::cout << "Didn't work on account of " << TokenTypeToString(type) << std::endl;
+    } catch(std::string e){
+        std::cout << "Failure!" << std::endl;
+        std::cout << '\t' << e << std:: endl;
     }
 
     delete lexer;

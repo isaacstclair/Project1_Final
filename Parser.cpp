@@ -1,38 +1,50 @@
 
 #include "Parser.h"
 
-bool Parser::Match(TokenType current, TokenType toMatch){
-    if(current == toMatch){
+
+Parser::Parser(std::vector<Token*> tokens){
+    this->tokens = tokens;
+    ParseDatalogProgram();
+}
+
+Parser::~Parser(){
+    //clean up memory
+}
+
+
+bool Parser::Match(TokenType toMatch){
+    if(tokens.at(counter)->GetTokenType() == toMatch){
         return true;
     } else{return false;}
 }
 
-void Parser::ParseDatalogProgram(std::vector<Token*> tokens) {
-    ParseTerminal(tokens, TokenType::SCHEMES);
-    ParseTerminal(tokens, TokenType::COLON);
-    scheme(tokens);
-    schemeList(tokens);
-    ParseTerminal(tokens, TokenType::FACTS);
-    ParseTerminal(tokens, TokenType::COLON);
-    factList(tokens);
-    ParseTerminal(tokens, TokenType::RULES);
-    ParseTerminal(tokens, TokenType::COLON);
-    ruleList(tokens);
-    ParseTerminal(tokens, TokenType::QUERIES);
-    ParseTerminal(tokens, TokenType::COLON);
-    query(tokens);
-    queryList(tokens);
-    ParseTerminal(tokens, TokenType::EOF_TYPE);
+void Parser::ParseDatalogProgram() {
+    ParseTerminal(TokenType::SCHEMES);
+    ParseTerminal(TokenType::COLON);
+    scheme();
+    schemeList();
+    ParseTerminal(TokenType::FACTS);
+    ParseTerminal(TokenType::COLON);
+    factList();
+    ParseTerminal(TokenType::RULES);
+    ParseTerminal(TokenType::COLON);
+    ruleList();
+    ParseTerminal(TokenType::QUERIES);
+    ParseTerminal(TokenType::COLON);
+    query();
+    queryList();
+    ParseTerminal(TokenType::EOF_TYPE);
 
 }
 
 
 //TERMINALS
-void Parser::ParseTerminal(std::vector<Token*> tokens, TokenType type){
-    if(Match(tokens.at(counter)->GetTokenType(), type)){
+void Parser::ParseTerminal(TokenType type){
+    if(Match(type)){
         Advance();
     } else{
-        throw(type);
+        std::string error = tokens.at(counter)->GetStringError();
+        throw(error);
     }
 }
 
@@ -40,103 +52,103 @@ void Parser::ParseTerminal(std::vector<Token*> tokens, TokenType type){
 
 
 //NONTERMINALS
-void Parser::schemeList(std::vector<Token*> tokens){
+void Parser::schemeList(){
     if(tokens.at(counter)->GetTokenType() == TokenType::ID) {
-        scheme(tokens);
-        schemeList(tokens);
+        scheme();
+        schemeList();
     }
 }
-void Parser::factList(std::vector<Token*> tokens){
+void Parser::factList(){
     if(tokens.at(counter)->GetTokenType() == TokenType::ID) {
-        fact(tokens);
-        factList(tokens);
+        fact();
+        factList();
     }
 }
-void Parser::ruleList(std::vector<Token*> tokens){
+void Parser::ruleList(){
     if(tokens.at(counter)->GetTokenType() == TokenType::ID) {
-        rule(tokens);
-        ruleList(tokens);
+        rule();
+        ruleList();
     }
 }
-void Parser::queryList(std::vector<Token*> tokens){
+void Parser::queryList(){
     if(tokens.at(counter)->GetTokenType() == TokenType::ID) {
-        query(tokens);
-        queryList(tokens);
+        query();
+        queryList();
     }
 }
-void Parser::scheme(std::vector<Token*> tokens){
-    ParseTerminal(tokens, TokenType::ID);
-    ParseTerminal(tokens, TokenType::LEFTPAREN);
-    ParseTerminal(tokens, TokenType::ID);
-    idList(tokens);
-    ParseTerminal(tokens, TokenType::RIGHTPAREN);
+void Parser::scheme(){
+    ParseTerminal(TokenType::ID);
+    ParseTerminal(TokenType::LEFTPAREN);
+    ParseTerminal(TokenType::ID);
+    idList();
+    ParseTerminal(TokenType::RIGHTPAREN);
 }
-void Parser::fact(std::vector<Token*> tokens){
-    ParseTerminal(tokens, TokenType::ID);
-    ParseTerminal(tokens, TokenType::LEFTPAREN);
-    ParseTerminal(tokens, TokenType::STRING);
-    stringList(tokens);
-    ParseTerminal(tokens, TokenType::RIGHTPAREN);
-    ParseTerminal(tokens, TokenType::PERIOD);
+void Parser::fact(){
+    ParseTerminal(TokenType::ID);
+    ParseTerminal(TokenType::LEFTPAREN);
+    ParseTerminal(TokenType::STRING);
+    stringList();
+    ParseTerminal(TokenType::RIGHTPAREN);
+    ParseTerminal(TokenType::PERIOD);
 }
-void Parser::rule(std::vector<Token*> tokens){
-    headPredicate(tokens);
-    ParseTerminal(tokens, TokenType::COLON_DASH);
-    predicate(tokens);
-    predicateList(tokens);
-    ParseTerminal(tokens, TokenType::PERIOD);
+void Parser::rule(){
+    headPredicate();
+    ParseTerminal(TokenType::COLON_DASH);
+    predicate();
+    predicateList();
+    ParseTerminal(TokenType::PERIOD);
 }
-void Parser::query(std::vector<Token*> tokens){
-    predicate(tokens);
-    ParseTerminal(tokens, TokenType::QMARK);
+void Parser::query(){
+    predicate();
+    ParseTerminal(TokenType::QMARK);
 }
-void Parser::headPredicate(std::vector<Token*> tokens){
-    ParseTerminal(tokens, TokenType::ID);
-    ParseTerminal(tokens, TokenType::LEFTPAREN);
-    ParseTerminal(tokens, TokenType::ID);
-    idList(tokens);
-    ParseTerminal(tokens, TokenType::RIGHTPAREN);
+void Parser::headPredicate(){
+    ParseTerminal(TokenType::ID);
+    ParseTerminal(TokenType::LEFTPAREN);
+    ParseTerminal(TokenType::ID);
+    idList();
+    ParseTerminal(TokenType::RIGHTPAREN);
 }
-void Parser::predicate(std::vector<Token*> tokens){
-    ParseTerminal(tokens, TokenType::ID);
-    ParseTerminal(tokens, TokenType::LEFTPAREN);
-    parameter(tokens);
-    parameterList(tokens);
-    ParseTerminal(tokens, TokenType::RIGHTPAREN);
+void Parser::predicate(){
+    ParseTerminal(TokenType::ID);
+    ParseTerminal(TokenType::LEFTPAREN);
+    parameter();
+    parameterList();
+    ParseTerminal(TokenType::RIGHTPAREN);
 }
-void Parser::predicateList(std::vector<Token*> tokens){
+void Parser::predicateList(){
     if(tokens.at(counter)->GetTokenType() == TokenType::COMMA) {
-        ParseTerminal(tokens, TokenType::COMMA);
-        predicate(tokens);
-        predicateList(tokens);
+        ParseTerminal(TokenType::COMMA);
+        predicate();
+        predicateList();
     }
 }
-void Parser::parameterList(std::vector<Token*> tokens){
+void Parser::parameterList(){
     if(tokens.at(counter)->GetTokenType() == TokenType::COMMA) {
-        ParseTerminal(tokens, TokenType::COMMA);
-        parameter(tokens);
-        parameterList(tokens);
+        ParseTerminal(TokenType::COMMA);
+        parameter();
+        parameterList();
     }
 }
-void Parser::stringList(std::vector<Token*> tokens){
+void Parser::stringList(){
     if(tokens.at(counter)->GetTokenType() == TokenType::COMMA) {
-        ParseTerminal(tokens, TokenType::COMMA);
-        ParseTerminal(tokens, TokenType::STRING);
-        stringList(tokens);
+        ParseTerminal(TokenType::COMMA);
+        ParseTerminal(TokenType::STRING);
+        stringList();
     }
 }
-void Parser::idList(std::vector<Token*> tokens){
+void Parser::idList(){
     if(tokens.at(counter)->GetTokenType() == TokenType::COMMA) {
-        ParseTerminal(tokens, TokenType::COMMA);
-        ParseTerminal(tokens, TokenType::ID);
-        idList(tokens);
+        ParseTerminal(TokenType::COMMA);
+        ParseTerminal(TokenType::ID);
+        idList();
     }
 }
-void Parser::parameter(std::vector<Token*> tokens){
-    if(Match(tokens.at(counter)->GetTokenType(),TokenType::STRING)){
-        ParseTerminal(tokens, TokenType::STRING);
-    } else if (Match(tokens.at(counter)->GetTokenType(),TokenType::ID)){
-        ParseTerminal(tokens, TokenType::ID);
+void Parser::parameter(){
+    if(Match(TokenType::STRING)){
+        ParseTerminal(TokenType::STRING);
+    } else if (Match(TokenType::ID)){
+        ParseTerminal(TokenType::ID);
     }
 
 }

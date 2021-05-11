@@ -1,4 +1,6 @@
 #include "Token.h"
+#include <string>
+#include <iostream>
 
 Token::Token(TokenType type, std::string description, int line) {
     // TODO: initialize all member variables
@@ -36,8 +38,14 @@ std::string TokenTypeToString(TokenType type){
 
 void Token::ToString(){
     std::cout << "(" << TokenTypeToString(type) << "," << "\"" << description << "\"" << "," << line << ")" << std::endl;
-
 }
+
+std::string Token::GetStringError(){
+    std::string error = "(" + TokenTypeToString(type) + "," + "\"" + description + "\"," + std::to_string(line) + ")";
+    return(error);
+}
+
+
 
 TokenType Token::GetTokenType() {
     return(type);

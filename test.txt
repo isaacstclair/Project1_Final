@@ -1,7 +1,13 @@
-Isaac
-'isaac'
-Queries
-Schemes
-# Shouldn't have included this!
 
-Should include these
+
+# scheme/query lists should be required
+
+Schemes:
+
+Facts:
+
+Rules:
+
+Queries:
+
+
