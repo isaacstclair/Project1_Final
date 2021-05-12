@@ -1,14 +1,23 @@
-//
-// Created by isaac on 5/10/2021.
-//
 
-#ifndef PROJECT1_STARTER_CODE_PREDICATE_H
-#define PROJECT1_STARTER_CODE_PREDICATE_H
+#include <vector>
+#include <string>
+#include "Parameter.h"
+#include <sstream>
+
+#ifndef PREDICATE_H
+#define PREDICATE_H
 
 
 class Predicate {
+private:
+    std::string name;
+    std::vector<Parameter> parameters;
 
+public:
+    Predicate(std::string name, std::vector<Parameter> parameters);
+    ~Predicate();
+    std::string PredicateToString();
 };
 
 
-#endif //PROJECT1_STARTER_CODE_PREDICATE_H
+#endif PREDICATE_H

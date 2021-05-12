@@ -1,5 +1,13 @@
-//
-// Created by isaac on 5/10/2021.
-//
+
 
 #include "Parameter.h"
+
+Parameter::Parameter(std::string parameter){
+    this->parameter = parameter;
+}
+
+Parameter::~Parameter(){}
+
+std::string Parameter::getParameter(){
+    return parameter;
+}

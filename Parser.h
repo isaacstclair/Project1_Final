@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Token.h"
+#include "DatalogProgram.h"
 #include <vector>
+#include "Predicate.h"
 
 class Parser
 {
@@ -9,6 +11,9 @@ private:
     int counter = 0;
     int Advance();
     std::vector<Token*> tokens;
+    std::vector<Parameter> schemeParameters;
+    std::vector<Parameter> factParameters;
+    std::vector<Parameter> queryParamters;
 
 public:
     Parser(std::vector<Token*> tokens);

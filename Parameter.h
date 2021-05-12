@@ -1,14 +1,20 @@
-//
-// Created by isaac on 5/10/2021.
-//
 
-#ifndef PROJECT1_STARTER_CODE_PARAMETER_H
-#define PROJECT1_STARTER_CODE_PARAMETER_H
+#ifndef PARAMETER_H
+#define PARAMETER_H
+#include <string>
 
 
 class Parameter {
+private:
+    std::string parameter;
+
+public:
+    Parameter(std::string parameter);
+    ~Parameter();
+    std::string getParameter();
+
 
 };
 
 
-#endif //PROJECT1_STARTER_CODE_PARAMETER_H
+#endif PARAMETER_H

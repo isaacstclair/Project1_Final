@@ -83,6 +83,7 @@ void Parser::scheme(){
     idList();
     ParseTerminal(TokenType::RIGHTPAREN);
 }
+
 void Parser::fact(){
     ParseTerminal(TokenType::ID);
     ParseTerminal(TokenType::LEFTPAREN);

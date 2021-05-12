@@ -1,14 +1,25 @@
-//
-// Created by isaac on 5/10/2021.
-//
+#include "Predicate.h"
+#include <string>
+#include <vector>
 
-#ifndef PROJECT1_STARTER_CODE_RULE_H
-#define PROJECT1_STARTER_CODE_RULE_H
+#ifndef RULE_H
+#define RULE_H
+
 
 
 class Rule {
 
+private:
+    Predicate headPredicate;
+    std::vector<Predicate> bodyPredicates;
+public:
+    Rule();
+    ~Rule();
+    std::string RuleToString();
+    void addBodyPredicates(Predicate body);
+    void setHeadPredicate(Predicate head);
+
 };
 
 
-#endif //PROJECT1_STARTER_CODE_RULE_H
+#endif RULE_H
