@@ -22,8 +22,8 @@ void Rule::addBody(Predicate body){
 
 std::string Rule::RulesToString(std::vector<Predicate> body){
     std::stringstream ss;
-    for (int i=0; i < body.size(); i++){
-        if(i == body.size()-1){ss << body.at(i).PredicateToString();}else{ss << body.at(i).PredicateToString() << ",";}
+    for (int i=0; i < int(body.size()); i++){
+        if(i == int(body.size())-1){ss << body.at(i).PredicateToString();}else{ss << body.at(i).PredicateToString() << ",";}
     }
 
     std::string ruleVector = ss.str();
