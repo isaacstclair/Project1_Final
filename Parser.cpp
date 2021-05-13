@@ -109,6 +109,10 @@ void Parser::fact(){
 
 }
 void Parser::rule(){
+    parameterVector.clear();
+    predicateVector.clear();
+    stringVector.clear();
+    idVector.clear();
     Predicate head = headPredicate();
     ParseTerminal(TokenType::COLON_DASH);
     Predicate firstBody = predicate();
@@ -143,6 +147,9 @@ Predicate Parser::headPredicate(){
     return(predicate);
 }
 Predicate Parser::predicate(){
+    idVector.clear();
+    parameterVector.clear();
+    stringVector.clear();
     std::string name = tokens.at(counter)->GetTokenDescription();
     ParseTerminal(TokenType::ID);
     ParseTerminal(TokenType::LEFTPAREN);
@@ -154,7 +161,6 @@ Predicate Parser::predicate(){
     return(predicate);
 }
 std::vector<Predicate> Parser::predicateList(){
-    std::vector<Predicate> predicateVector;
     if(tokens.at(counter)->GetTokenType() == TokenType::COMMA) {
         ParseTerminal(TokenType::COMMA);
         Predicate next = predicate();

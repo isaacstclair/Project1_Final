@@ -15,6 +15,7 @@ private:
     std::vector<Parameter> stringVector;
     std::vector<Parameter> idVector;
     std::vector<Parameter> parameterVector;
+    std::vector<Predicate> predicateVector;
 
 public:
     Parser(std::vector<Token*> tokens);
