@@ -11,7 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26f21852-0f4e-4b91-aecc-f98f7190fb4d" name="Default Changelist" comment="Project2 Updated--Final" />
+    <list default="true" id="26f21852-0f4e-4b91-aecc-f98f7190fb4d" name="Default Changelist" comment="Project2 Updated--Final">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +80,8 @@
       <workItem from="1620930868699" duration="30000" />
       <workItem from="1620931136066" duration="888000" />
       <workItem from="1620932110806" duration="135000" />
+      <workItem from="1620932257775" duration="18000" />
+      <workItem from="1620932709755" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="Project2">
       <created>1620688676506</created>
@@ -134,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620932148994</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Project2 Updated--Final">
+      <created>1620932267459</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620932267459</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
