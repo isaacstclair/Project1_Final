@@ -3,6 +3,7 @@
 #include "Token.h"
 #include "DatalogProgram.h"
 #include <vector>
+#include <list>
 #include "Predicate.h"
 
 class Parser
@@ -11,9 +12,8 @@ private:
     int counter = 0;
     int Advance();
     std::vector<Token*> tokens;
-    std::vector<Parameter> schemeParameters;
-    std::vector<Parameter> factParameters;
-    std::vector<Parameter> queryParamters;
+    std::vector<Parameter> stringVector;
+    std::vector<Parameter> idVector;
 
 public:
     Parser(std::vector<Token*> tokens);
@@ -33,14 +33,16 @@ public:
     void fact();
     void rule();
     void query();
-    void headPredicate();
-    void predicate();
-    void predicateList();
-    void parameterList();
-    void stringList();
-    void idList();
-    void parameter();
+    Predicate headPredicate();
+    Predicate predicate();
+    std::vector<Predicate> predicateList();
+    std::vector<Parameter> parameterList();
+    std::vector<Parameter> Parser::stringList();
+    std::vector<Parameter> idList();
+    Parameter parameter();
+    std::string ToString();
 
+    DatalogProgram datalog;
 
 };
 

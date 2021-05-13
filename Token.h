@@ -24,6 +24,7 @@ public:
     void ToString();
     std::string Token::GetStringError();
     TokenType GetTokenType();
+    std::string GetTokenDescription();
 
     // TODO: add other needed methods
 };

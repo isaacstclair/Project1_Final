@@ -1,19 +1,31 @@
 
 #include "Rule.h"
 
+Rule::Rule(){}
+
 Rule::~Rule(){}
 
 std::string Rule::RuleToString(){
     std::string rule = "rule";
     //should be headPredicate, :- , bodyPredicates
-    rule = headPredicate.Predicate::PredicateToString() + " :- This is where the rules go";// + Predicate::PredicateVectorToString(bodyPredicates);
+    rule = headPredicate.Predicate::PredicateToString() + " :- " + RulesToString(bodyPredicates);
     return rule;
 }
 
-void Rule::setHeadPredicate(Predicate head){
+void Rule::setHead(Predicate head){
     headPredicate = head;
 }
 
-void Rule::addBodyPredicates(Predicate body){
+void Rule::addBody(Predicate body){
     bodyPredicates.push_back(body);
+}
+
+std::string Rule::RulesToString(std::vector<Predicate> body){
+    std::stringstream ss;
+    for (int i=0; i < body.size(); i++){
+        if(i == body.size()-1){ss << body.at(i).PredicateToString();}else{ss << body.at(i).PredicateToString() << ",";}
+    }
+
+    std::string ruleVector = ss.str();
+    return(ruleVector);
 }

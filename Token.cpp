@@ -51,3 +51,6 @@ TokenType Token::GetTokenType() {
     return(type);
 }
 
+std::string Token::GetTokenDescription(){
+    return(description);
+}

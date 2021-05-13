@@ -37,10 +37,10 @@ int main(int argc, char** argv) {
     try {
         Parser myParser(lexer->getTokens());
         std::cout << "Success!" << std::endl;
-        //std::cout << DatalogProgram->ToString();
+        std::cout << myParser.ToString();
     } catch(std::string e){
         std::cout << "Failure!" << std::endl;
-        std::cout << '  ' << e << std:: endl;
+        std::cout << "  " << e << std:: endl;
     }
 
     delete lexer;

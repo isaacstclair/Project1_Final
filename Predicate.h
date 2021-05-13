@@ -14,6 +14,7 @@ private:
     std::vector<Parameter> parameters;
 
 public:
+    Predicate();
     Predicate(std::string name, std::vector<Parameter> parameters);
     ~Predicate();
     std::string PredicateToString();
