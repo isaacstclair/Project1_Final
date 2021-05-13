@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Project1_Starter_Code" targetName="Project1_Starter_Code" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="26f21852-0f4e-4b91-aecc-f98f7190fb4d" name="Default Changelist" comment="Project2 Updated--Final" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sDx4SRFxL4n2KB30ywd8lccT0e" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Project1_Starter_Code" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="test.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project1_Starter_Code" TARGET_NAME="Project1_Starter_Code" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project1_Starter_Code" RUN_TARGET_NAME="Project1_Starter_Code">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26f21852-0f4e-4b91-aecc-f98f7190fb4d" name="Default Changelist" comment="" />
+      <created>1620420770007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620420770007</updated>
+      <workItem from="1620420771241" duration="1585000" />
+      <workItem from="1620667543195" duration="4428000" />
+      <workItem from="1620679012856" duration="9544000" />
+      <workItem from="1620708328670" duration="66000" />
+      <workItem from="1620745780088" duration="4346000" />
+      <workItem from="1620750336364" duration="10673000" />
+      <workItem from="1620768392835" duration="6584000" />
+      <workItem from="1620831676482" duration="4000" />
+      <workItem from="1620838590365" duration="11600000" />
+      <workItem from="1620919236443" duration="10960000" />
+      <workItem from="1620930483605" duration="45000" />
+      <workItem from="1620930772332" duration="31000" />
+    </task>
+    <task id="LOCAL-00001" summary="Project2">
+      <created>1620688676506</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620688676506</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Project2 Updated">
+      <created>1620750051156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620750051156</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Project2 Updated--Works">
+      <created>1620841986022</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620841986022</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Project2 Updated--Final">
+      <created>1620930798372</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620930798372</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project2" />
+    <MESSAGE value="Project2 Updated" />
+    <MESSAGE value="Project2 Updated--Works" />
+    <MESSAGE value="Project2 Updated--Final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project2 Updated--Final" />
+  </component>
+</project>
