@@ -123,6 +123,7 @@ void Parser::rule(){
     datalog.addRule(rule);
 }
 void Parser::query(){
+    parameterVector.clear();
     Predicate queryPredicate = predicate();
     ParseTerminal(TokenType::QMARK);
     datalog.addQuery(queryPredicate);
@@ -165,7 +166,6 @@ std::vector<Predicate> Parser::predicateList(){
     }
 }
 std::vector<Parameter> Parser::parameterList(){
-    parameterVector.clear();
     if(tokens.at(counter)->GetTokenType() == TokenType::COMMA) {
         ParseTerminal(TokenType::COMMA);
         parameterVector.push_back(tokens.at(counter)->GetTokenDescription());
