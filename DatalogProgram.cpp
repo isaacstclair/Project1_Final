@@ -25,8 +25,8 @@ std::string DatalogProgram::DatalogProgramToString(){
     ss.str(std::string());
 
     for(int i=0; i<int(FactsPredicates.size()); i++){
-        if(i == 0){ss << FactsPredicates.at(i).PredicateToString() << "\n";} else {
-            ss << "  " << FactsPredicates.at(i).PredicateToString() << "\n";
+        if(i == 0){ss << FactsPredicates.at(i).PredicateToString() << ".\n";} else {
+            ss << "  " << FactsPredicates.at(i).PredicateToString() << ".\n";
         }
     }
 
@@ -35,8 +35,8 @@ std::string DatalogProgram::DatalogProgramToString(){
     ss.str(std::string());
 
     for(int i=0; i<int(Rules.size()); i++){
-        if(i == 0){ss << Rules.at(i).RuleToString() << "\n";} else {
-            ss << "  " << Rules.at(i).RuleToString() << "\n";
+        if(i == 0){ss << Rules.at(i).RuleToString() << ".\n";} else {
+            ss << "  " << Rules.at(i).RuleToString() << ".\n";
         }
     }
 
@@ -45,8 +45,8 @@ std::string DatalogProgram::DatalogProgramToString(){
     ss.str(std::string());
 
     for(int i=0; i<int(QueriesPredicates.size()); i++){
-        if(i == 0){ss << QueriesPredicates.at(i).PredicateToString() << "\n";} else {
-            ss << "  " << QueriesPredicates.at(i).PredicateToString() << "\n";
+        if(i == 0){ss << QueriesPredicates.at(i).PredicateToString() << "?\n";} else {
+            ss << "  " << QueriesPredicates.at(i).PredicateToString() << "?\n";
         }
     }
 
