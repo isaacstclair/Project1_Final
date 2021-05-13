@@ -40,7 +40,6 @@ int main(int argc, char** argv) {
         std::cout << myParser.ToString();
     } catch(std::string e){
         std::cout << "Failure!" << std::endl;
-        std::cout << "  " << e << std:: endl;
     }
 
     delete lexer;
