@@ -23,4 +23,4 @@ public:
 };
 
 
-#endif RULE_H
+#endif // RULE_H

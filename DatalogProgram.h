@@ -28,4 +28,4 @@ public:
 };
 
 
-#endif DATALOGPROGRAM_H
+#endif // DATALOGPROGRAM_H

@@ -103,7 +103,7 @@ void Parser::fact(){
     ParseTerminal(TokenType::PERIOD);
     datalog.addFact(predicate);
 
-    for(int i=0; i < parameters.size(); i++){
+    for(int i=0; i < int(parameters.size()); i++){
         datalog.addDomain(parameters.at(i).getParameter());
     }
 
@@ -117,7 +117,7 @@ void Parser::rule(){
     ParseTerminal(TokenType::PERIOD);
     Rule rule = Rule();
     rule.setHead(head);
-    for(int i=0; i < body.size(); i++) {
+    for(int i=0; i < int(body.size()); i++) {
         rule.addBody(body.at(i));
     }
     datalog.addRule(rule);

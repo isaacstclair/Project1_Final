@@ -21,4 +21,4 @@ public:
 };
 
 
-#endif PREDICATE_H
+#endif // PREDICATE_H

@@ -17,4 +17,4 @@ public:
 };
 
 
-#endif PARAMETER_H
+#endif // PARAMETER_H

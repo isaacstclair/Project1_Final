@@ -22,7 +22,7 @@ private:
 public:
     Token(TokenType type, std::string description, int line);
     void ToString();
-    std::string Token::GetStringError();
+    std::string GetStringError();
     TokenType GetTokenType();
     std::string GetTokenDescription();
 

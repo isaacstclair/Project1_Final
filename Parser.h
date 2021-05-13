@@ -37,7 +37,7 @@ public:
     Predicate predicate();
     std::vector<Predicate> predicateList();
     std::vector<Parameter> parameterList();
-    std::vector<Parameter> Parser::stringList();
+    std::vector<Parameter> stringList();
     std::vector<Parameter> idList();
     Parameter parameter();
     std::string ToString();
