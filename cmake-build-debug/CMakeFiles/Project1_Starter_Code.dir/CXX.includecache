@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Project2/Automaton.h
-Token.h
-C:/Project2/Token.h
-
-C:/Project2/DatalogProgram.cpp
-DatalogProgram.h
-C:/Project2/DatalogProgram.h
-
 C:/Project2/DatalogProgram.h
 vector
 -
@@ -29,16 +21,6 @@ Rule.h
 C:/Project2/Rule.h
 Parameter.h
 C:/Project2/Parameter.h
-
-C:/Project2/Lexer.h
-vector
--
-cctype
--
-Automaton.h
-C:/Project2/Automaton.h
-Token.h
-C:/Project2/Token.h
 
 C:/Project2/Parameter.h
 string
@@ -60,12 +42,6 @@ list
 Predicate.h
 C:/Project2/Predicate.h
 
-C:/Project2/Predicate.cpp
-iostream
--
-Predicate.h
-C:/Project2/Predicate.h
-
 C:/Project2/Predicate.h
 vector
 -
@@ -75,10 +51,6 @@ Parameter.h
 C:/Project2/Parameter.h
 sstream
 -
-
-C:/Project2/Rule.cpp
-Rule.h
-C:/Project2/Rule.h
 
 C:/Project2/Rule.h
 Predicate.h
@@ -94,19 +66,5 @@ C:/Project2/Token.h
 string
 -
 iostream
--
-
-C:/Project2/main.cpp
-Lexer.h
-C:/Project2/Lexer.h
-Parser.h
-C:/Project2/Parser.h
-iostream
--
-string
--
-fstream
--
-sstream
 -
 

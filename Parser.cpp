@@ -42,7 +42,7 @@ void Parser::ParseTerminal(TokenType type){
     if(Match(type)){
         Advance();
     } else{
-        std::string error = tokens.at(counter)->GetStringError() + "error at counter " + std::to_string(counter);
+        std::string error = tokens.at(counter)->GetStringError();
         throw(error);
     }
 }
@@ -165,7 +165,7 @@ std::vector<Predicate> Parser::predicateList(){
     }
 }
 std::vector<Parameter> Parser::parameterList(){
-    std::vector<Parameter> parameterVector;
+    parameterVector.clear();
     if(tokens.at(counter)->GetTokenType() == TokenType::COMMA) {
         ParseTerminal(TokenType::COMMA);
         parameterVector.push_back(tokens.at(counter)->GetTokenDescription());
